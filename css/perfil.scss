@@ -1,0 +1,63 @@
+@import "./global.scss";
+.perfil{
+    width: 100%;
+    min-width: 320px;
+    background-color: $color-secondary;
+    &__data{
+        height: auto;
+        background-color: $color-grey;
+        display: grid;
+        grid-template-columns: minmax(25px, 30px) 1fr minmax(25px, 30px);
+        grid-template-rows: 190px 30px 1fr;
+        margin-bottom: 20px;
+        align-items: center;
+        img{
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            justify-self: center;
+            height: 150px;
+            width: 220px;
+        }
+        h2{
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: $font-roboto;
+        }
+        p{
+            grid-column: 2 /3;
+            grid-row: 3 / 4;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: $font-roboto;
+        }
+    }
+    &__proyect{
+        margin-left: 25px;
+        margin-right: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-title{
+            height: 40px;
+            width: 100%;
+            border-bottom: 1px solid $color-grey;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        &-item{
+            margin-top: 10px;
+            h3{
+                font-weight: bold;
+                font-size: 16px;
+            }
+            p{
+                font-size: 12px;
+                font-weight: normal;
+                text-align: justify;
+            }
+        }
+    }
+}

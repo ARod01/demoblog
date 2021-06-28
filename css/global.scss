@@ -1,0 +1,95 @@
+$color-primary: #18121e;
+$color-secondary: #fffffa;
+$color-grey: #b9b9b9;
+$font-loto: 'Lato', sans-serif;
+$font-roboto: 'Roboto Mono', monospace;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    min-width: 320px;
+    &__nav{
+        background-color: $color-primary;
+    }
+    &__page{
+        height: 15vh;
+        background-color: $color-secondary;
+        &-logo{
+            display: inline-block;
+            width: 140px;
+            height: 50px;
+            margin-left: 25px;
+            background-image: url("../assets/icons/logo.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        &-about{
+            margin-right: 25px;
+            font-size: 16px;
+            text-decoration: none;
+            border-bottom: 1px solid #000;
+        }
+        &-about:hover{
+            text-decoration: none;
+            color: #000
+        }
+    }
+}
+
+.blog__contact{
+    width: 100%;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-grey;
+    padding: 25px;
+    &-card{
+        display: grid;
+        grid-template-columns: 50px 70px 150px;
+        grid-template-rows: 30px 50px;
+        align-items: center;
+        img{
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            width: 40px;
+            height: 40px;
+        }
+        a{
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            border-bottom: 1px solid #000;
+            color: #000;
+        }
+        a:hover{
+            color: #000;
+            text-decoration: none;
+        }
+        p{
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+            align-self: flex-start;
+        }
+
+    }
+}
+
+.footer{
+    width: 100%;
+    background-color: $color-grey;
+    &__green{
+        height: 30px;
+    }
+    &__contact{
+        height: 30px;
+        background-color: $color-primary;
+        color: #ffffff;
+        text-align: center;
+        vertical-align: center;
+    }
+}
